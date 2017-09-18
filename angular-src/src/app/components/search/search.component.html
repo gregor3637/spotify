@@ -1,3 +1,13 @@
-<p>
-  search works!
-</p>
+<h1>Need Music?</h1>
+<p class="lead">Use the Spotify ap to browse new released and find what you search for</p>
+<form>
+  <div class="form-group">
+    <input 
+        type="text" 
+        name="searchStr" 
+        [(ngModel)]="searchStr" 
+        class="form-control" 
+        placeholder="Search Music...."
+        (keyup)="searchMusic()">
+  </div>
+</form>
