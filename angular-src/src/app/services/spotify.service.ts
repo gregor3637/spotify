@@ -8,19 +8,18 @@ import { Injectable } from '@angular/core';
 export class SpotifyService {
 
   private searchUrl:string;
-  private accessToken:string;
-  private accessOptions:any;
-
-  constructor(private http:Http) { 
-    this.accessToken = 'BQCxG1DNEEI0b-kt3_5x-0KumpRbiu7Cdnb1tpko673iAl8fxZPBpofAbp7xjZWRow4S4J0mkZCMXXED6El45pN05b6K5sMSw-QuW64-rfGAiJqjNQtrc7S6pAa83bi75yuwcgjX-SEAIMH3Jn354jnawHqRsPM&refresh_token=AQDgQsXSnyBYII65YNd6XVFYFjt7msJbnD-C-UOLj84TzemQHcWlXUmMtAL74-r8Td9I-FCNMLHD4BY_qkY7luO4E-b1wxh5BF-9rXYLHo7rwipJemiRALoZRI69UEQox6s';
-    this.accessOptions = {
+  //the below token comes from https://www.youtube.com/watch?v=m3YpkqhHKdk
+  private accessToken:string = 'BQCxG1DNEEI0b-kt3_5x-0KumpRbiu7Cdnb1tpko673iAl8fxZPBpofAbp7xjZWRow4S4J0mkZCMXXED6El45pN05b6K5sMSw-QuW64-rfGAiJqjNQtrc7S6pAa83bi75yuwcgjX-SEAIMH3Jn354jnawHqRsPM&refresh_token=AQDgQsXSnyBYII65YNd6XVFYFjt7msJbnD-C-UOLj84TzemQHcWlXUmMtAL74-r8Td9I-FCNMLHD4BY_qkY7luO4E-b1wxh5BF-9rXYLHo7rwipJemiRALoZRI69UEQox6s';
+  private accessOptions:any = {
       method: 'GET',
       headers: {
         'Authorization': 'Bearer ' + this.accessToken
       },
       mode: 'cors',
       cache: 'default'
-    }
+    };
+
+  constructor(private http:Http) { 
   }
 
   
